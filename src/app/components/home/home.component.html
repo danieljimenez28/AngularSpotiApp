@@ -1,0 +1,18 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<app-error-message [error]="error" [messageError]="messageError"></app-error-message>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+    <app-tarjeta [cancion]="cancionFor" *ngFor="let cancionFor of newReleses"></app-tarjeta>
+    <!-- <div class="col" *ngFor="let cancion of newReleses">
+        <div class="card">
+            <img [src]="cancion.images | noimage" class="card-img-top" [alt]="cancion.name">
+            <div class="card-body">
+                <h5 class="card-title">{{ cancion.name | uppercase }}</h5>
+                <p class="card-text">
+                    <span *ngFor="let arlist of cancion.artists" class="badge bg-primary">{{ arlist.name }}</span>
+                </p>
+            </div>
+        </div>
+    </div> -->
+</div>

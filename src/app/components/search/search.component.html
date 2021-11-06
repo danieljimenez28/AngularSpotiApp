@@ -1,0 +1,22 @@
+<app-error-message [error]="error" [messageError]="messageError">
+</app-error-message>
+
+<div class="row">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar Artista">
+    </div>
+</div>
+<div class="p-5">
+    <app-loading *ngIf="loading"></app-loading>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <app-tarjeta [cancion]="cancionFor" *ngFor="let cancionFor of artistas"></app-tarjeta>
+    <!-- <div class="col" *ngFor="let artista of artistas">
+        <div class="card">
+            <img [src]="artista.images | noimage" class="card-img-top" [alt]="artista.name">
+            <div class="card-body">
+                <h5 class="card-title">{{ artista.name | uppercase }}</h5>
+            </div>
+        </div>
+    </div> -->
+</div>

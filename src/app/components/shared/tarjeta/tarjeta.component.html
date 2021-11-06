@@ -1,0 +1,12 @@
+<!-- *ngFor="let cancion of newReleses" -->
+<div class="col animated fadeIn">
+    <div (click)="verArtista( cancion )" class="card puntero">
+        <img [src]="cancion.images | noimage" class="card-img-top" [alt]="cancion.name">
+        <div class="card-body">
+            <h5 class="card-title">{{ cancion.name | uppercase }}</h5>
+            <p class="card-text">
+                <span *ngFor="let arlist of cancion.artists" class="badge bg-primary">{{ arlist.name }}</span>
+            </p>
+        </div>
+    </div>
+</div>

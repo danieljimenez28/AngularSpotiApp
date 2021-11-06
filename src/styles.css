@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white !important;
+}
+
+hr {
+    border-color: white;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.error {
+    color: red;
+}
+
+.btn-saveToken {
+    margin-top: 10px;
+}
+
+.container-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(58, 55, 55, 0.301);
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    padding: 1rem 0;
+}

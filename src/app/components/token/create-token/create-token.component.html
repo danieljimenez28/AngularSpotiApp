@@ -1,0 +1,24 @@
+<h1>Cargar Token del API de Spotity</h1>
+
+<form (submit)="guargarToken()" [formGroup]="form">
+
+    <div class="row">
+        <div class="col-md-12">
+            <label>Token:</label>
+            <input formControlName="token" class="form-control" placeholder="Token de acceso" />
+            <p class="error" *ngIf="form.invalid">{{getErrorCampoToken()}}</p>
+        </div>
+    </div>
+
+    <button class="btn btn-primary btn-saveToken" [disabled]="form.invalid">Guardar Token</button>
+</form>
+
+<ol>
+    <li *ngFor="let tok of tokens">{{tok.token}} -- Active => {{tok.active}}</li>
+</ol>
+
+<!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nulla accusamus voluptates itaque maiores, aperiam sunt veritatis commodi non praesentium eveniet, voluptas molestias? Distinctio molestias ipsa incidunt atque, magni officiis.</p>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nulla accusamus voluptates itaque maiores, aperiam sunt veritatis commodi non praesentium eveniet, voluptas molestias? Distinctio molestias ipsa incidunt atque, magni officiis.</p>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique nulla accusamus voluptates itaque maiores, aperiam sunt veritatis commodi non praesentium eveniet, voluptas molestias? Distinctio molestias ipsa incidunt atque, magni officiis.</p> -->
